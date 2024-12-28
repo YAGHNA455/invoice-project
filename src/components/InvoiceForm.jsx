@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { ArrowLeft, MoreHorizontal, Upload } from 'lucide-react';
@@ -19,21 +19,32 @@ const validationSchema = Yup.object({
 });
 
 const InvoiceForm = () => {
+  // Initialize form values from localStorage if available
   const initialValues = {
-    vendorName: '',
-    purchaseOrder: '',
-    invoiceNumber: '',
-    totalAmount: '',
-    paymentTerms: '',
-    invoiceDueDate: '',
-    postDate: '',
-    description: '',
-    lineAmount: '',
-    department: '',
-    account: '',
-    location: '',
-    comments: ''
+    vendorName: localStorage.getItem('vendorName') || '',
+    purchaseOrder: localStorage.getItem('purchaseOrder') || '',
+    invoiceNumber: localStorage.getItem('invoiceNumber') || '',
+    totalAmount: localStorage.getItem('totalAmount') || '',
+    paymentTerms: localStorage.getItem('paymentTerms') || '',
+    invoiceDueDate: localStorage.getItem('invoiceDueDate') || '',
+    postDate: localStorage.getItem('postDate') || '',
+    description: localStorage.getItem('description') || '',
+    lineAmount: localStorage.getItem('lineAmount') || '',
+    department: localStorage.getItem('department') || '',
+    account: localStorage.getItem('account') || '',
+    location: localStorage.getItem('location') || '',
+    comments: localStorage.getItem('comments') || ''
   };
+
+  useEffect(() => {
+    // Load form data from localStorage on component mount
+    Object.keys(initialValues).forEach(key => {
+      const storedValue = localStorage.getItem(key);
+      if (storedValue) {
+        initialValues[key] = storedValue;
+      }
+    });
+  }, []);
 
   const handleSubmit = (values, { setSubmitting }) => {
     console.log(values);
@@ -71,7 +82,7 @@ const InvoiceForm = () => {
               validationSchema={validationSchema}
               onSubmit={handleSubmit}
             >
-              {({ errors, touched, isSubmitting }) => (
+              {({ values, errors, touched, isSubmitting }) => (
                 <Form className="bg-white shadow rounded-lg divide-y divide-gray-200">
                   {/* Vendor Details */}
                   <div className="px-4 py-5 sm:p-6">
