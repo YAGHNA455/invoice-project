@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { ArrowLeft, MoreHorizontal, Upload } from 'lucide-react';
+import { ArrowLeft, MoreHorizontal } from 'lucide-react';
 import UploadComponent from './UploadComponent';
 
 const validationSchema = Yup.object({
