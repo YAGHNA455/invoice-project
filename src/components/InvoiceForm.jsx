@@ -37,7 +37,6 @@ const InvoiceForm = () => {
   };
 
   useEffect(() => {
-    // Load form data from localStorage on component mount
     Object.keys(initialValues).forEach(key => {
       const storedValue = localStorage.getItem(key);
       if (storedValue) {
@@ -53,7 +52,6 @@ const InvoiceForm = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <nav className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
@@ -70,7 +68,7 @@ const InvoiceForm = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
+
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 gap-6">
           <div className="col-span-1">
@@ -82,7 +80,7 @@ const InvoiceForm = () => {
               validationSchema={validationSchema}
               onSubmit={handleSubmit}
             >
-              {({ values, errors, touched, isSubmitting }) => (
+              {({ errors, touched, isSubmitting }) => (
                 <Form className="bg-white shadow rounded-lg divide-y divide-gray-200">
                   {/* Vendor Details */}
                   <div className="px-4 py-5 sm:p-6">
