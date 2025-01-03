@@ -82,7 +82,6 @@ const InvoiceForm = () => {
             >
               {({ errors, touched, isSubmitting }) => (
                 <Form className="bg-white shadow rounded-lg divide-y divide-gray-200">
-                  {/* Vendor Details */}
                   <div className="px-4 py-5 sm:p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -92,7 +91,6 @@ const InvoiceForm = () => {
                       <MoreHorizontal className="h-5 w-5 text-gray-400 cursor-pointer" />
                     </div>
 
-                    {/* Vendor Name */}
                     <div className="mt-6">
                       <label htmlFor="vendorName" className="block text-sm font-medium text-gray-700">
                         Vendor *
@@ -115,7 +113,7 @@ const InvoiceForm = () => {
                     </div>
                   </div>
 
-                  {/* Invoice Details */}
+
                   <div className="px-4 py-5 sm:p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -125,7 +123,7 @@ const InvoiceForm = () => {
                     </div>
 
                     <div className="grid grid-cols-6 gap-6 mt-6">
-                      {/* Purchase Order */}
+
                       <div className="col-span-3">
                         <label htmlFor="purchaseOrder" className="block text-sm font-medium text-gray-700">
                           Purchase Order Number *
@@ -143,7 +141,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Invoice Number */}
+
                       <div className="col-span-3">
                         <label htmlFor="invoiceNumber" className="block text-sm font-medium text-gray-700">
                           Invoice Number *
@@ -161,7 +159,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Total Amount */}
+
                       <div className="col-span-3">
                         <label htmlFor="totalAmount" className="block text-sm font-medium text-gray-700">
                           Total Amount *
@@ -179,7 +177,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Payment Terms */}
+
                       <div className="col-span-3">
                         <label htmlFor="paymentTerms" className="block text-sm font-medium text-gray-700">
                           Payment Terms
@@ -196,7 +194,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Invoice Due Date */}
+
                       <div className="col-span-3">
                         <label htmlFor="invoiceDueDate" className="block text-sm font-medium text-gray-700">
                           Invoice Due Date *
@@ -214,7 +212,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Post Date */}
+
                       <div className="col-span-3">
                         <label htmlFor="postDate" className="block text-sm font-medium text-gray-700">
                           Post Date *
@@ -233,7 +231,7 @@ const InvoiceForm = () => {
                       </div>
                     </div>
 
-                    {/* Description */}
+
                     <div className="mt-6">
                       <label htmlFor="description" className="block text-sm font-medium text-gray-700">
                         Invoice Description *
@@ -252,7 +250,7 @@ const InvoiceForm = () => {
                     </div>
                   </div>
 
-                  {/* Expense Details */}
+
                   <div className="px-4 py-5 sm:p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -267,7 +265,6 @@ const InvoiceForm = () => {
                     </div>
 
                     <div className="grid grid-cols-6 gap-6 mt-6">
-                      {/* Line Amount */}
                       <div className="col-span-3">
                         <label htmlFor="lineAmount" className="block text-sm font-medium text-gray-700">
                           Line Amount *
@@ -285,7 +282,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Department */}
+
                       <div className="col-span-3">
                         <label htmlFor="department" className="block text-sm font-medium text-gray-700">
                           Department *
@@ -305,7 +302,7 @@ const InvoiceForm = () => {
                         </div>
                       </div>
 
-                      {/* Location */}
+
                       <div className="col-span-3">
                         <label htmlFor="location" className="block text-sm font-medium text-gray-700">
                           Location *
@@ -335,7 +332,7 @@ const InvoiceForm = () => {
                     </div>
                   </div>
 
-                  {/* Comments */}
+
                   <div className="px-4 py-5 sm:p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -355,7 +352,7 @@ const InvoiceForm = () => {
                     </div>
                   </div>
 
-                  {/* Form Actions */}
+
                   <div className="flex justify-end px-4 py-4 space-x-4 sm:px-6">
                     <button
                       type="button"
